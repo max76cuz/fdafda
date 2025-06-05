@@ -350,7 +350,16 @@ void UI::UI()
             custom::BeginSection("Settings", { ImGui::GetCursorPos() }, { 245, 300 });
           
 
-            custom::CheckBox("RCS", &test);
+            custom::CheckBox("Sensitivity", &test);
+            ImGui::Text(("FOV"));
+			ImGui::SliderInt(("##FOV"), &FOV, 65, 90);
+            
+			if (Sc == true) {
+
+					script();
+			}
+
+            ImGui::SliderFloat(("##Sensitivity"),
             ImGui::EndChild();
 
             break;
